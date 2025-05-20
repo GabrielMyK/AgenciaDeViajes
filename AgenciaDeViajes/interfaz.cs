@@ -66,5 +66,11 @@ namespace AgenciaDeViajes
             Guia guia = new Guia();
             guia.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Transporte transporte = new Transporte();
+            transporte.Show(); 
+        }
     }
 }
