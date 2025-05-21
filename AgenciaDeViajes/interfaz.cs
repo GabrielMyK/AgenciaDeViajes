@@ -72,5 +72,11 @@ namespace AgenciaDeViajes
             Transporte transporte = new Transporte();
             transporte.Show(); 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Alojamiento alojamiento = new Alojamiento();    
+            alojamiento.Show();
+        }
     }
 }

@@ -33,10 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textIdCliente = new System.Windows.Forms.TextBox();
-            this.textIdViaje = new System.Windows.Forms.TextBox();
             this.textPrecio = new System.Windows.Forms.TextBox();
-            this.textReserva = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -44,6 +41,10 @@
             this.textIdReserva = new System.Windows.Forms.TextBox();
             this.comboIdViaje = new System.Windows.Forms.ComboBox();
             this.comboIdCliente = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textIdViaje = new System.Windows.Forms.TextBox();
+            this.textIdCliente = new System.Windows.Forms.TextBox();
+            this.textReserva = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,33 +94,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Precio";
             // 
-            // textIdCliente
-            // 
-            this.textIdCliente.Location = new System.Drawing.Point(38, 102);
-            this.textIdCliente.Name = "textIdCliente";
-            this.textIdCliente.Size = new System.Drawing.Size(100, 22);
-            this.textIdCliente.TabIndex = 5;
-            // 
-            // textIdViaje
-            // 
-            this.textIdViaje.Location = new System.Drawing.Point(38, 61);
-            this.textIdViaje.Name = "textIdViaje";
-            this.textIdViaje.Size = new System.Drawing.Size(100, 22);
-            this.textIdViaje.TabIndex = 6;
-            // 
             // textPrecio
             // 
             this.textPrecio.Location = new System.Drawing.Point(613, 67);
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(100, 22);
             this.textPrecio.TabIndex = 7;
-            // 
-            // textReserva
-            // 
-            this.textReserva.Location = new System.Drawing.Point(613, 135);
-            this.textReserva.Name = "textReserva";
-            this.textReserva.Size = new System.Drawing.Size(100, 22);
-            this.textReserva.TabIndex = 8;
             // 
             // btnGuardar
             // 
@@ -185,12 +165,41 @@
             this.comboIdCliente.Size = new System.Drawing.Size(121, 24);
             this.comboIdCliente.TabIndex = 15;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(623, 135);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // textIdViaje
+            // 
+            this.textIdViaje.Location = new System.Drawing.Point(38, 61);
+            this.textIdViaje.Name = "textIdViaje";
+            this.textIdViaje.Size = new System.Drawing.Size(100, 22);
+            this.textIdViaje.TabIndex = 6;
+            // 
+            // textIdCliente
+            // 
+            this.textIdCliente.Location = new System.Drawing.Point(38, 102);
+            this.textIdCliente.Name = "textIdCliente";
+            this.textIdCliente.Size = new System.Drawing.Size(100, 22);
+            this.textIdCliente.TabIndex = 5;
+            // 
+            // textReserva
+            // 
+            this.textReserva.Location = new System.Drawing.Point(790, 219);
+            this.textReserva.Name = "textReserva";
+            this.textReserva.Size = new System.Drawing.Size(100, 22);
+            this.textReserva.TabIndex = 8;
+            // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(957, 666);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboIdCliente);
             this.Controls.Add(this.comboIdViaje);
             this.Controls.Add(this.textIdReserva);
@@ -223,10 +232,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textIdCliente;
-        private System.Windows.Forms.TextBox textIdViaje;
         private System.Windows.Forms.TextBox textPrecio;
-        private System.Windows.Forms.TextBox textReserva;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
@@ -234,5 +240,9 @@
         private System.Windows.Forms.TextBox textIdReserva;
         private System.Windows.Forms.ComboBox comboIdViaje;
         private System.Windows.Forms.ComboBox comboIdCliente;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textIdViaje;
+        private System.Windows.Forms.TextBox textIdCliente;
+        private System.Windows.Forms.TextBox textReserva;
     }
 }

@@ -81,7 +81,7 @@ namespace AgenciaDeViajes
                 {
                     string idCliente = comboIdCliente.SelectedValue.ToString();
                     string idViaje = comboIdViaje.SelectedValue.ToString();
-                    objetoCN.InsertarReserva(idCliente,idViaje, textPrecio.Text, textReserva.Text);
+                    objetoCN.InsertarReserva(idCliente,idViaje, textPrecio.Text, dateTimePicker1.Text);
                     MessageBox.Show("Se inserto Correctamente");
                     mostrarReserva();
                     LimpiarForm();
