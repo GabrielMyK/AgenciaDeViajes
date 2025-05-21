@@ -35,15 +35,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textDestino = new System.Windows.Forms.TextBox();
-            this.textSalida = new System.Windows.Forms.TextBox();
-            this.textRegreso = new System.Windows.Forms.TextBox();
             this.textDescripcion = new System.Windows.Forms.TextBox();
-            this.textGuia = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.textIdViaje = new System.Windows.Forms.TextBox();
             this.IdViaje = new System.Windows.Forms.Label();
+            this.comboIdGuia = new System.Windows.Forms.ComboBox();
+            this.dateTimeSalida = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeRegreso = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(80, 147);
+            this.button4.Location = new System.Drawing.Point(66, 147);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(151, 23);
             this.button4.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(379, 97);
+            this.button5.Location = new System.Drawing.Point(425, 96);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 23);
             this.button5.TabIndex = 5;
@@ -109,35 +109,12 @@
             this.textDestino.Size = new System.Drawing.Size(86, 22);
             this.textDestino.TabIndex = 6;
             // 
-            // textSalida
-            // 
-            this.textSalida.Location = new System.Drawing.Point(240, 97);
-            this.textSalida.Name = "textSalida";
-            this.textSalida.Size = new System.Drawing.Size(86, 22);
-            this.textSalida.TabIndex = 7;
-            this.textSalida.TextChanged += new System.EventHandler(this.textSalida_TextChanged);
-            // 
-            // textRegreso
-            // 
-            this.textRegreso.Location = new System.Drawing.Point(240, 147);
-            this.textRegreso.Name = "textRegreso";
-            this.textRegreso.Size = new System.Drawing.Size(86, 22);
-            this.textRegreso.TabIndex = 8;
-            this.textRegreso.TextChanged += new System.EventHandler(this.textRegreso_TextChanged);
-            // 
             // textDescripcion
             // 
             this.textDescripcion.Location = new System.Drawing.Point(527, 51);
             this.textDescripcion.Name = "textDescripcion";
             this.textDescripcion.Size = new System.Drawing.Size(100, 22);
             this.textDescripcion.TabIndex = 9;
-            // 
-            // textGuia
-            // 
-            this.textGuia.Location = new System.Drawing.Point(527, 97);
-            this.textGuia.Name = "textGuia";
-            this.textGuia.Size = new System.Drawing.Size(100, 22);
-            this.textGuia.TabIndex = 10;
             // 
             // btnGuardar
             // 
@@ -187,20 +164,42 @@
             this.IdViaje.Text = "IdViaje";
             this.IdViaje.Visible = false;
             // 
+            // comboIdGuia
+            // 
+            this.comboIdGuia.FormattingEnabled = true;
+            this.comboIdGuia.Location = new System.Drawing.Point(561, 96);
+            this.comboIdGuia.Name = "comboIdGuia";
+            this.comboIdGuia.Size = new System.Drawing.Size(121, 24);
+            this.comboIdGuia.TabIndex = 16;
+            // 
+            // dateTimeSalida
+            // 
+            this.dateTimeSalida.Location = new System.Drawing.Point(223, 96);
+            this.dateTimeSalida.Name = "dateTimeSalida";
+            this.dateTimeSalida.Size = new System.Drawing.Size(200, 22);
+            this.dateTimeSalida.TabIndex = 17;
+            // 
+            // dateTimeRegreso
+            // 
+            this.dateTimeRegreso.Location = new System.Drawing.Point(223, 147);
+            this.dateTimeRegreso.Name = "dateTimeRegreso";
+            this.dateTimeRegreso.Size = new System.Drawing.Size(200, 22);
+            this.dateTimeRegreso.TabIndex = 18;
+            // 
             // Viaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 610);
+            this.Controls.Add(this.dateTimeRegreso);
+            this.Controls.Add(this.dateTimeSalida);
+            this.Controls.Add(this.comboIdGuia);
             this.Controls.Add(this.IdViaje);
             this.Controls.Add(this.textIdViaje);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textGuia);
             this.Controls.Add(this.textDescripcion);
-            this.Controls.Add(this.textRegreso);
-            this.Controls.Add(this.textSalida);
             this.Controls.Add(this.textDestino);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -226,14 +225,14 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textDestino;
-        private System.Windows.Forms.TextBox textSalida;
-        private System.Windows.Forms.TextBox textRegreso;
         private System.Windows.Forms.TextBox textDescripcion;
-        private System.Windows.Forms.TextBox textGuia;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox textIdViaje;
         private System.Windows.Forms.Label IdViaje;
+        private System.Windows.Forms.ComboBox comboIdGuia;
+        private System.Windows.Forms.DateTimePicker dateTimeSalida;
+        private System.Windows.Forms.DateTimePicker dateTimeRegreso;
     }
 }

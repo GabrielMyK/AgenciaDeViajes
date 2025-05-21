@@ -28,11 +28,18 @@ namespace AgenciaDeViajes
         private void Transporte_Load(object sender, EventArgs e)
         {
             mostrarTransporte();
+            CargarViaje();
+        }
+        private void CargarViaje()
+        {
+            CNviaje viaje = new CNviaje();
+            comboIdViaje.DataSource = viaje.mostrarViaje();
+            comboIdViaje.DisplayMember = "Destino";
+            comboIdViaje.ValueMember = "ID_Viaje";
         }
 
         public void LimpiarForm()
         {
-            textIdViaje.Clear();
             textTipo.Clear();
         }
 
@@ -48,7 +55,8 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.InsertarTransporte(textTipo.Text, textIdViaje.Text);
+                    string idViaje = comboIdViaje.SelectedValue.ToString();
+                    objetoCN.InsertarTransporte(textTipo.Text, idViaje);
                     MessageBox.Show("Se inserto Correctamente");
                     mostrarTransporte();
                     LimpiarForm();
@@ -62,7 +70,8 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.editarTrans(textTipo.Text, textIdTrans.Text, textIdViaje.Text);
+                    string idViaje = comboIdViaje.SelectedValue.ToString();
+                    objetoCN.editarTrans(textTipo.Text, textIdTrans.Text, idViaje);
                     MessageBox.Show("Se edito correctamente");
                     mostrarTransporte();
                     editar = false;
@@ -82,7 +91,7 @@ namespace AgenciaDeViajes
                 editar = true;
                 textIdTrans.Text = dataGridView1.CurrentRow.Cells["ID_Transporte"].Value.ToString();
                 textTipo.Text = dataGridView1.CurrentRow.Cells["Tipo"].Value.ToString();
-                textIdViaje.Text = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
+                comboIdViaje.SelectedValue = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
             }
             else
             {
@@ -104,6 +113,11 @@ namespace AgenciaDeViajes
             {
                 MessageBox.Show("Seleccione una fila");
             }
+        }
+
+        private void textIdViaje_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

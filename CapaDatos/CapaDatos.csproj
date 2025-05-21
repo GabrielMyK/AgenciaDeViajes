@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="CDalojamiento.cs" />
     <Compile Include="CDcliente.cs" />
+    <Compile Include="CDdetalleReser.cs" />
     <Compile Include="CDguia.cs" />
+    <Compile Include="CDpago.cs" />
     <Compile Include="CDreserva.cs" />
     <Compile Include="CDtransporte.cs" />
     <Compile Include="CDusuario.cs" />

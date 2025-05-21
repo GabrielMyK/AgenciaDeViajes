@@ -29,7 +29,6 @@ namespace AgenciaDeViajes
             textPrecio.Clear();
             textTelf.Clear();
             textTipo.Clear();
-            textViaje.Clear();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,7 +36,8 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.insertarAloja(textNombre.Text, textDireccion.Text, textPrecio.Text, textTelf.Text, textTipo.Text, textViaje.Text);
+                    string idViaje = comboIdViaje.SelectedValue.ToString();
+                    objetoCN.insertarAloja(textNombre.Text, textDireccion.Text, textPrecio.Text, textTelf.Text, textTipo.Text, idViaje);
                     MessageBox.Show("Se inserto correctamente");
                     mostrarAloja();
                     LimpiarForm();
@@ -52,7 +52,8 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.editarAloja(textNombre.Text, textDireccion.Text, textPrecio.Text, textTelf.Text, textTipo.Text, textViaje.Text,textAloja.Text);
+                    string idViaje = comboIdViaje.SelectedValue.ToString();
+                    objetoCN.editarAloja(textNombre.Text, textDireccion.Text, textPrecio.Text, textTelf.Text, textTipo.Text, idViaje,textAloja.Text);
                     MessageBox.Show("Se edito correctamente");
                     mostrarAloja();
                     LimpiarForm();
@@ -67,6 +68,15 @@ namespace AgenciaDeViajes
         private void Alojamiento_Load(object sender, EventArgs e)
         {
             mostrarAloja();
+            CargarViaje();
+        }
+
+        private void CargarViaje()
+        {
+            CNviaje viaje = new CNviaje();
+            comboIdViaje.DataSource = viaje.mostrarViaje();
+            comboIdViaje.DisplayMember = "Destino";
+            comboIdViaje.ValueMember = "ID_Viaje";
         }
 
         public void mostrarAloja()
@@ -85,7 +95,7 @@ namespace AgenciaDeViajes
                 textPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
                 textTelf.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
                 textTipo.Text = dataGridView1.CurrentRow.Cells["Tipo"].Value.ToString();
-                textViaje.Text = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
+                comboIdViaje.SelectedValue = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
                 textAloja.Text = dataGridView1.CurrentRow.Cells["ID_Alojamiento"].Value.ToString();
 
             }

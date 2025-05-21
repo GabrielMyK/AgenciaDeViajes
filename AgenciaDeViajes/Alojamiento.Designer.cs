@@ -39,13 +39,13 @@
             this.textPrecio = new System.Windows.Forms.TextBox();
             this.textTelf = new System.Windows.Forms.TextBox();
             this.textTipo = new System.Windows.Forms.TextBox();
-            this.textViaje = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.idAloja = new System.Windows.Forms.Label();
             this.textAloja = new System.Windows.Forms.TextBox();
+            this.comboIdViaje = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,13 +138,6 @@
             this.textTipo.Size = new System.Drawing.Size(100, 22);
             this.textTipo.TabIndex = 10;
             // 
-            // textViaje
-            // 
-            this.textViaje.Location = new System.Drawing.Point(517, 145);
-            this.textViaje.Name = "textViaje";
-            this.textViaje.Size = new System.Drawing.Size(100, 22);
-            this.textViaje.TabIndex = 11;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -203,18 +196,26 @@
             this.textAloja.TabIndex = 17;
             this.textAloja.Visible = false;
             // 
+            // comboIdViaje
+            // 
+            this.comboIdViaje.FormattingEnabled = true;
+            this.comboIdViaje.Location = new System.Drawing.Point(517, 145);
+            this.comboIdViaje.Name = "comboIdViaje";
+            this.comboIdViaje.Size = new System.Drawing.Size(121, 24);
+            this.comboIdViaje.TabIndex = 18;
+            // 
             // Alojamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 585);
+            this.Controls.Add(this.comboIdViaje);
             this.Controls.Add(this.textAloja);
             this.Controls.Add(this.idAloja);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textViaje);
             this.Controls.Add(this.textTipo);
             this.Controls.Add(this.textTelf);
             this.Controls.Add(this.textPrecio);
@@ -248,12 +249,12 @@
         private System.Windows.Forms.TextBox textPrecio;
         private System.Windows.Forms.TextBox textTelf;
         private System.Windows.Forms.TextBox textTipo;
-        private System.Windows.Forms.TextBox textViaje;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label idAloja;
         private System.Windows.Forms.TextBox textAloja;
+        private System.Windows.Forms.ComboBox comboIdViaje;
     }
 }

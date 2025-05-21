@@ -78,5 +78,11 @@ namespace AgenciaDeViajes
             Alojamiento alojamiento = new Alojamiento();    
             alojamiento.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pago pago = new Pago();
+            pago.Show();
+        }
     }
 }

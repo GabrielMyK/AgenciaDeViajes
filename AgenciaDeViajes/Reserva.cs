@@ -26,10 +26,10 @@ namespace AgenciaDeViajes
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 editar = true;
-                textIdCliente.Text = dataGridView1.CurrentRow.Cells["ID_Cliente"].Value.ToString();
-                textIdViaje.Text = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
+                comboIdCliente.SelectedValue = dataGridView1.CurrentRow.Cells["ID_Cliente"].Value.ToString();
+                comboIdViaje.SelectedValue = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
                 textPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
-                textReserva.Text = dataGridView1.CurrentRow.Cells["Fecha_Reserva"].Value.ToString();
+                dateTimePicker1.Text = dataGridView1.CurrentRow.Cells["Fecha_Reserva"].Value.ToString();
                 textIdReserva.Text = dataGridView1.CurrentRow.Cells["ID_Reserva"].Value.ToString();
             }
             else
@@ -67,10 +67,8 @@ namespace AgenciaDeViajes
         }
         private void LimpiarForm()
         {
-            textIdCliente.Clear();
-            textIdViaje.Clear();
             textPrecio.Clear();
-            textReserva.Clear();
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -95,7 +93,9 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.editarReserva(textIdCliente.Text, textIdViaje.Text, textPrecio.Text, textReserva.Text, textIdReserva.Text);
+                    string idCliente = comboIdCliente.SelectedValue.ToString();
+                    string idViaje = comboIdViaje.SelectedValue.ToString();
+                    objetoCN.editarReserva(idCliente,idViaje, textPrecio.Text, dateTimePicker1.Text, textIdReserva.Text);
                     MessageBox.Show("Se edito correctamente");
                     mostrarReserva();
                     editar = false;
@@ -121,6 +121,12 @@ namespace AgenciaDeViajes
             {
                 MessageBox.Show("Seleccione una fila");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            detalleReserva detalleReserva = new detalleReserva();
+            detalleReserva.Show();
         }
     }
 }

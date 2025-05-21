@@ -24,6 +24,15 @@ namespace AgenciaDeViajes
         private void Viaje_Load(object sender, EventArgs e)
         {
             MostrarViaje();
+            cargarGuia();
+        }
+
+        private void cargarGuia()
+        {
+            CNguia guia = new CNguia();
+            comboIdGuia.DataSource = guia.mostrarGuia();
+            comboIdGuia.DisplayMember = "Idioma";
+            comboIdGuia.ValueMember = "ID_Guia";
         }
 
         public void MostrarViaje()
@@ -45,10 +54,7 @@ namespace AgenciaDeViajes
         private void LimpiarForm()
         {
             textDestino.Clear();
-            textSalida.Clear();
-            textRegreso.Clear();
             textDescripcion.Clear();
-            textGuia.Clear();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -57,7 +63,8 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.InsertarViaje(textDestino.Text, textSalida.Text, textRegreso.Text, textDescripcion.Text, textGuia.Text);
+                    string idGUia= comboIdGuia.SelectedValue.ToString();
+                    objetoCN.InsertarViaje(textDestino.Text, dateTimeSalida.Text, dateTimeRegreso.Text, textDescripcion.Text, idGUia);
                     MessageBox.Show("Se inserto Correctamente");
                     MostrarViaje();
                     LimpiarForm();
@@ -71,7 +78,8 @@ namespace AgenciaDeViajes
             {
                 try
                 {
-                    objetoCN.editarViaje(textDestino.Text, textSalida.Text, textRegreso.Text, textDescripcion.Text, textGuia.Text, textIdViaje.Text);
+                    string idGUia = comboIdGuia.SelectedValue.ToString();
+                    objetoCN.editarViaje(textDestino.Text, dateTimeSalida.Text, dateTimeRegreso.Text, textDescripcion.Text, idGUia, textIdViaje.Text);
                     MessageBox.Show("Se edito correctamente");
                     MostrarViaje();
                     editar = false;
@@ -90,10 +98,10 @@ namespace AgenciaDeViajes
             {
                 editar = true;
                 textDestino.Text = dataGridView1.CurrentRow.Cells["Destino"].Value.ToString();
-                textSalida.Text = dataGridView1.CurrentRow.Cells["Fecha_Salida"].Value.ToString();
-                textRegreso.Text = dataGridView1.CurrentRow.Cells["Fecha_Regreso"].Value.ToString();
+                dateTimeSalida.Text = dataGridView1.CurrentRow.Cells["Fecha_Salida"].Value.ToString();
+                dateTimeRegreso.Text = dataGridView1.CurrentRow.Cells["Fecha_Regreso"].Value.ToString();
                 textDescripcion.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
-                textGuia.Text = dataGridView1.CurrentRow.Cells["ID_Guia"].Value.ToString();
+                comboIdGuia.SelectedValue = dataGridView1.CurrentRow.Cells["ID_Guia"].Value.ToString();
                 textIdViaje.Text = dataGridView1.CurrentRow.Cells["ID_Viaje"].Value.ToString();
 
             }

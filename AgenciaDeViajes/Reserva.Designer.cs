@@ -42,9 +42,7 @@
             this.comboIdViaje = new System.Windows.Forms.ComboBox();
             this.comboIdCliente = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textIdViaje = new System.Windows.Forms.TextBox();
-            this.textIdCliente = new System.Windows.Forms.TextBox();
-            this.textReserva = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,26 +170,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 16;
             // 
-            // textIdViaje
+            // button1
             // 
-            this.textIdViaje.Location = new System.Drawing.Point(38, 61);
-            this.textIdViaje.Name = "textIdViaje";
-            this.textIdViaje.Size = new System.Drawing.Size(100, 22);
-            this.textIdViaje.TabIndex = 6;
-            // 
-            // textIdCliente
-            // 
-            this.textIdCliente.Location = new System.Drawing.Point(38, 102);
-            this.textIdCliente.Name = "textIdCliente";
-            this.textIdCliente.Size = new System.Drawing.Size(100, 22);
-            this.textIdCliente.TabIndex = 5;
-            // 
-            // textReserva
-            // 
-            this.textReserva.Location = new System.Drawing.Point(790, 219);
-            this.textReserva.Name = "textReserva";
-            this.textReserva.Size = new System.Drawing.Size(100, 22);
-            this.textReserva.TabIndex = 8;
+            this.button1.Location = new System.Drawing.Point(835, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 49);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Detalle de Reserva";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Reserva
             // 
@@ -199,6 +186,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(957, 666);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboIdCliente);
             this.Controls.Add(this.comboIdViaje);
@@ -207,10 +195,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textReserva);
             this.Controls.Add(this.textPrecio);
-            this.Controls.Add(this.textIdViaje);
-            this.Controls.Add(this.textIdCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -241,8 +226,6 @@
         private System.Windows.Forms.ComboBox comboIdViaje;
         private System.Windows.Forms.ComboBox comboIdCliente;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textIdViaje;
-        private System.Windows.Forms.TextBox textIdCliente;
-        private System.Windows.Forms.TextBox textReserva;
+        private System.Windows.Forms.Button button1;
     }
 }

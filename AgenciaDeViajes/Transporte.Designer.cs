@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.textTipo = new System.Windows.Forms.TextBox();
-            this.textIdViaje = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textIdTrans = new System.Windows.Forms.TextBox();
+            this.comboIdViaje = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,13 +47,6 @@
             this.textTipo.Name = "textTipo";
             this.textTipo.Size = new System.Drawing.Size(100, 22);
             this.textTipo.TabIndex = 3;
-            // 
-            // textIdViaje
-            // 
-            this.textIdViaje.Location = new System.Drawing.Point(525, 82);
-            this.textIdViaje.Name = "textIdViaje";
-            this.textIdViaje.Size = new System.Drawing.Size(100, 22);
-            this.textIdViaje.TabIndex = 4;
             // 
             // btnGuardar
             // 
@@ -132,11 +125,20 @@
             this.textIdTrans.TabIndex = 11;
             this.textIdTrans.Visible = false;
             // 
+            // comboIdViaje
+            // 
+            this.comboIdViaje.FormattingEnabled = true;
+            this.comboIdViaje.Location = new System.Drawing.Point(526, 82);
+            this.comboIdViaje.Name = "comboIdViaje";
+            this.comboIdViaje.Size = new System.Drawing.Size(121, 24);
+            this.comboIdViaje.TabIndex = 12;
+            // 
             // Transporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 576);
+            this.Controls.Add(this.comboIdViaje);
             this.Controls.Add(this.textIdTrans);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -144,7 +146,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textIdViaje);
             this.Controls.Add(this.textTipo);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Transporte";
@@ -158,7 +159,6 @@
 
         #endregion
         private System.Windows.Forms.TextBox textTipo;
-        private System.Windows.Forms.TextBox textIdViaje;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
@@ -167,5 +167,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textIdTrans;
+        private System.Windows.Forms.ComboBox comboIdViaje;
     }
 }

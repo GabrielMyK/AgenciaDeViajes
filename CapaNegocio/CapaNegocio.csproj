@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="CNalojamiento.cs" />
     <Compile Include="CNcliente.cs" />
+    <Compile Include="CNdetalle.cs" />
     <Compile Include="CNguia.cs" />
+    <Compile Include="CNpago.cs" />
     <Compile Include="CNreserva.cs" />
     <Compile Include="CNtransporte.cs" />
     <Compile Include="CNusuario.cs" />
