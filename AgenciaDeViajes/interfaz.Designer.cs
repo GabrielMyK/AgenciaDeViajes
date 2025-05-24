@@ -210,7 +210,7 @@ namespace AgenciaDeViajes
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button5.Location = new System.Drawing.Point(12, 317);
+            this.button5.Location = new System.Drawing.Point(415, 305);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(148, 32);
@@ -305,7 +305,6 @@ namespace AgenciaDeViajes
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -329,6 +328,7 @@ namespace AgenciaDeViajes
             this.Controls.Add(this.button9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button8);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
