@@ -84,5 +84,12 @@ namespace AgenciaDeViajes
             Pago pago = new Pago();
             pago.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textReserva = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,13 +66,6 @@
             this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "idReserva";
-            // 
-            // textReserva
-            // 
-            this.textReserva.Location = new System.Drawing.Point(537, 197);
-            this.textReserva.Name = "textReserva";
-            this.textReserva.Size = new System.Drawing.Size(100, 22);
-            this.textReserva.TabIndex = 2;
             // 
             // btnGuardar
             // 
@@ -213,7 +205,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textReserva);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "detalleReserva";
@@ -229,7 +220,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textReserva;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

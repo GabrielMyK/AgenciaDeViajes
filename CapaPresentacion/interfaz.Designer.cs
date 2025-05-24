@@ -147,6 +147,7 @@ namespace AgenciaDeViajes
             this.button1.TabIndex = 3;
             this.button1.Text = "Cerrar Seción";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -164,7 +165,7 @@ namespace AgenciaDeViajes
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(12, 210);
+            this.button2.Location = new System.Drawing.Point(360, 246);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 31);
@@ -179,7 +180,7 @@ namespace AgenciaDeViajes
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(12, 281);
+            this.button3.Location = new System.Drawing.Point(143, 246);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 32);
@@ -194,7 +195,7 @@ namespace AgenciaDeViajes
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(12, 245);
+            this.button4.Location = new System.Drawing.Point(143, 175);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(148, 32);
@@ -239,12 +240,12 @@ namespace AgenciaDeViajes
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button7.Location = new System.Drawing.Point(474, 175);
+            this.button7.Location = new System.Drawing.Point(613, 174);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(129, 31);
             this.button7.TabIndex = 10;
-            this.button7.Text = "ddddddddddddd";
+            this.button7.Text = "Guia";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -274,7 +275,7 @@ namespace AgenciaDeViajes
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button8.Location = new System.Drawing.Point(12, 174);
+            this.button8.Location = new System.Drawing.Point(360, 174);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(148, 32);
@@ -289,7 +290,7 @@ namespace AgenciaDeViajes
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Georgia", 10.2F);
             this.button9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button9.Location = new System.Drawing.Point(166, 210);
+            this.button9.Location = new System.Drawing.Point(613, 246);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(133, 31);
@@ -301,15 +302,12 @@ namespace AgenciaDeViajes
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(64)))), ((int)(((byte)(82)))));
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
@@ -328,10 +326,13 @@ namespace AgenciaDeViajes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(928, 410);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

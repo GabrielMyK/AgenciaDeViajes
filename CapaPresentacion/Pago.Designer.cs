@@ -138,9 +138,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(459, 252);
+            this.button3.Location = new System.Drawing.Point(500, 235);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(81, 40);
             this.button3.TabIndex = 13;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
